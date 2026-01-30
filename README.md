@@ -3,7 +3,7 @@
 **Avoiding Premature Collapse: Adaptive Annealing for Entropy-Regularized Structural Inference**
 
 [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 This repository provides a PyTorch implementation of **Efficient PH-ASC (Piecewise Hybrid Adaptive Stability Control)**.
 
