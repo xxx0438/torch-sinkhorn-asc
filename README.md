@@ -72,6 +72,19 @@ This code implements the algorithms described in:
 
 Avoiding Premature Collapse: Adaptive Annealing for Entropy-Regularized Structural Inference  Abstract: Differentiable matching layers, often implemented via entropy-regularized Optimal Transport, serve as a critical approximate inference mechanism in structural prediction. However, recovering discrete permutations via annealing is notoriously unstable... We identify a fundamental mechanism for this failure: Premature Mode Collapse.
 
+## 🤝 Enterprise Services & Commercial Support
+
+While this open-source library provides a research-grade implementation of EPH-ASC [1], we offer dedicated services for enterprise clients who require production-ready solutions.
+
+**Our Services Include:**
+* **Production Optimization**: Custom CUDA kernel implementations for extreme performance (beyond standard PyTorch).
+* **Integration Support**: Assistance with integrating Sinkhorn layers into your existing pipelines (Visual Matching, Permutation Learning, Ranking).
+* **Custom Stability Control**: Tuning the $k_{safe}$ parameter and safety schedules for your specific datasets.
+* **Consulting**: Expert guidance on avoiding "Mode Collapse" in large-scale structural inference tasks.
+
+**Contact Us:**
+📧 Email: [your.email@example.com](liuyizhi774@gmail.com)
+
 License
 MIT License
 
