@@ -22,3 +22,63 @@ It addresses the "Premature Mode Collapse" problem in differentiable matching la
 git clone [https://github.com/xxx0438/torch-sinkhorn-asc.git](https://github.com/xxx0438/torch-sinkhorn-asc.git)
 cd torch-sinkhorn-asc
 pip install -r requirements.txt
+
+Directory Structure
+torch-sinkhorn-asc/
+├── src/
+│   ├── sinkhorn.py      # Log-domain Sinkhorn solver
+│   └── scheduler.py     # EPH-ASC Adaptive Scheduler
+├── examples/
+│   └── train_demo.py    # Training loop simulation
+├── requirements.txt
+└── setup.py
+
+Usage
+import torch
+from src.sinkhorn import SinkhornLayer
+from src.scheduler import EPH_ASC_Scheduler
+
+# 1. Initialize layer and scheduler
+# k_safe=0.5 is the recommended default from the paper [cite: 137]
+sinkhorn = SinkhornLayer(n_iters=20)
+scheduler = EPH_ASC_Scheduler(
+    init_epsilon=1.0,
+    min_epsilon=0.01,
+    decay_rate=0.95,
+    k_safe=0.5
+)
+
+# 2. Mock training loop
+for epoch in range(100):
+    # Get current temperature
+    curr_eps = scheduler.epsilon
+
+    # Forward pass
+    # cost_matrix shape: (Batch, N, N)
+    P = sinkhorn(cost_matrix, curr_eps)
+
+    # ... Compute Loss and Optimizer Step ...
+
+    # 3. Update Scheduler (Check drift and adjust temperature)
+    # Drift is monitored as ||P_t - P_{t-1}||_F (see Eq. 2 in paper [cite: 121])
+    new_eps = scheduler.step(P)
+
+Running the Demo
+python examples/train_demo.py
+
+Reference
+This code implements the algorithms described in:
+
+
+Avoiding Premature Collapse: Adaptive Annealing for Entropy-Regularized Structural Inference  Abstract: Differentiable matching layers, often implemented via entropy-regularized Optimal Transport, serve as a critical approximate inference mechanism in structural prediction. However, recovering discrete permutations via annealing is notoriously unstable... We identify a fundamental mechanism for this failure: Premature Mode Collapse.
+
+License
+MIT License
+
+Copyright (c) 2024 torch-sinkhorn-asc Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
