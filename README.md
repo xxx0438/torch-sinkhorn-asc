@@ -83,7 +83,7 @@ While this open-source library provides a research-grade implementation of EPH-A
 * **Consulting**: Expert guidance on avoiding "Mode Collapse" in large-scale structural inference tasks.
 
 **Contact Us:**
-📧 Email: [your.email@example.com](liuyizhi774@gmail.com)
+📧 Email:(liuyizhi774@gmail.com)
 
 License
 
