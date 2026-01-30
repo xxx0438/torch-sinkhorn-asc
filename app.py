@@ -106,3 +106,37 @@ with gr.Blocks() as demo:
 
 if __name__ == "__main__":
     demo.launch()
+# ... (上面是原本的绘图代码) ...
+
+# --- 创建 Gradio 界面 ---
+with gr.Blocks() as demo:
+    gr.Markdown("# 🔥 EPH-ASC: Avoiding Premature Collapse")
+    gr.Markdown("Visualizing how Adaptive Stability Control prevents early mode collapse in Sinkhorn layers.")
+    
+    with gr.Row():
+        with gr.Column():
+            n_points = gr.Slider(5, 50, value=10, step=1, label="Number of Points (N)")
+            decay_rate = gr.Slider(0.8, 0.99, value=0.95, label="Cooling Rate (Alpha)")
+            k_safe = gr.Slider(0.1, 2.0, value=0.5, label="Safety Slope (k_safe)")
+            btn = gr.Button("Run Simulation", variant="primary")
+        
+        with gr.Column():
+            plot_output = gr.Plot(label="Training Dynamics")
+    
+    btn.click(simulate, inputs=[n_points, decay_rate, k_safe], outputs=plot_output)
+
+    # ------------------ 新增：企业服务说明 ------------------
+    with gr.Accordion("💼 Want to use this in your Business?", open=False):
+        gr.Markdown("""
+        ### 🚀 Enterprise Services
+        We offer professional support to help you integrate **Adaptive Annealing** into your products.
+        
+        * **Custom Integration**: Fit EPH-ASC into your model backbone.
+        * **Performance Tuning**: Optimized implementations for low-latency environments.
+        
+        **[Contact Us for Commercial Licensing](mailto:your.email@example.com)**
+        """)
+    # -------------------------------------------------------
+
+if __name__ == "__main__":
+    demo.launch()
