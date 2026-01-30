@@ -86,12 +86,23 @@ While this open-source library provides a research-grade implementation of EPH-A
 📧 Email: [your.email@example.com](liuyizhi774@gmail.com)
 
 License
-MIT License
 
-Copyright (c) 2024 torch-sinkhorn-asc Authors
+This project is released under a **dual-licensing model**:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+### 1. Open Source License (AGPL-3.0)
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+You are free to use, modify, and distribute this software under the terms of the AGPL-3.0.
+If you use this software to provide a network service (e.g. SaaS, API, or online demo),
+you must make the complete corresponding source code available under the same license.
+
+See the `LICENSE-AGPL` file for details.
+
+### 2. Commercial License
+
+For commercial use cases that do **not** comply with the AGPL-3.0 (e.g. closed-source use,
+proprietary products, internal enterprise deployment, or SaaS without source disclosure),
+a separate **commercial license** is required.
+
+Please contact the author to obtain a commercial license.OVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
