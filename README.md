@@ -85,7 +85,7 @@ While this open-source library provides a research-grade implementation of EPH-A
 **Contact Us:**
 📧 Email:(liuyizhi774@gmail.com)
 
-License
+## License
 
 This project is released under a **dual-licensing model**:
 
@@ -101,8 +101,9 @@ See the `LICENSE-AGPL` file for details.
 
 ### 2. Commercial License
 
-For commercial use cases that do **not** comply with the AGPL-3.0 (e.g. closed-source use,
-proprietary products, internal enterprise deployment, or SaaS without source disclosure),
+For commercial use cases that do **not** comply with the AGPL-3.0
+(e.g. closed-source use, proprietary products, internal enterprise deployment,
+or SaaS without source disclosure),
 a separate **commercial license** is required.
 
-Please contact the author to obtain a commercial license.OVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Please contact the author to obtain a commercial license.
